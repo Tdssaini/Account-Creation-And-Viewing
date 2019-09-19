@@ -1,0 +1,34 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" controller="CreateAccountCompController">
+	 
+   <aura:attribute name="newAccount" type="Account" default="{ 'sobjectType': 'Account','Name': ''}"/>
+  
+   <div class="container">
+    <form class="slds-form--stacked">
+      <div class="slds-form-element__control">
+           <ui:inputText aura:id="accName" label="Account Name" class="slds-input" 
+                         labelClass="slds-form-element__label" value="{!v.newAccount.Name}" required="true" />
+      </div>
+      <div class="slds-form-element__control">
+        <ui:inputPhone label="Phone" class="slds-input" 
+                       labelClass="slds-form-element__label" value="{!v.newAccount.Phone}" />
+      </div>
+      <div class="slds-form-element__control">
+        <ui:inputPhone label="Fax" class="slds-input" 
+                       labelClass="slds-form-element__label" value="{!v.newAccount.Fax}" />
+      </div>
+      <div class="slds-form-element__control">
+        <ui:inputEmail label="Email" class="slds-input" 
+                       labelClass="slds-form-element__label" value="{!v.newAccount.Email}" />
+      </div>
+      <div class="slds-form-element__control">
+        <ui:inputText label="Website" class="slds-input" 
+                      labelClass="slds-form-element__label" value="{!v.newAccount.Website}" />
+      </div>
+      <div class="slds-form-element">
+        <ui:button label="Submit" class="slds-button slds-button--neutral"  
+                   press="{!c.createAccount}"/>
+      </div>
+    </form>
+   </div>
+    
+</aura:component>
